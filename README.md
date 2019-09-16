@@ -11,8 +11,7 @@ This website has many tutorials that are relevant to the types of analyses biolo
 
      
 
-2. Tour of RStudio
-------------------
+### 2. Tour of RStudio
 
 Next we will take a tour of RStudio as a class. We will cover:
 1. The console
@@ -23,8 +22,7 @@ Next we will take a tour of RStudio as a class. We will cover:
 
      
 
-3. Installing packages
-----------------------
+### 3. Installing packages
 
 Some special functions or datasets can be downloaded as packages. To install them, we use the `install.packages` command:
 
@@ -40,8 +38,7 @@ library(babynames)
 
      
 
-4. Basic functions in R
------------------------
+### 4. Basic functions in R
 
 R can perform basic mathematical functions, just like a calculator. Type the following into the console and press enter:
 
@@ -105,8 +102,7 @@ Include objects for your age and the number of years you've been at Davis. Have 
 
      
 
-5. Classes
-----------
+### 5. Classes
 
 R can work with more than just numbers, it can handle a variety of data formats. You can use the function `class` to check the type of data:
 
@@ -129,8 +125,7 @@ class(season)
 
      
 
-6. Vectors and dataframes
--------------------------
+### 6. Vectors and dataframes
 
 Usually we want to look at more than one number or value at once. For a single set of values, we can use a **vector**. To make a vector, we use the `c()` function (c stands for combine)
 
@@ -173,8 +168,7 @@ Remember, we can always use `?` to ask for help. If we want a description of the
 
      
 
-7. Subsetting
--------------
+### 7. Subsetting
 
 Sometimes we want to examine a specific portion of the data. There are several ways to do this. For a two-dimensional dataframe you can use square bracket notation `[x,y]` where x is the rows you want and y is the columns you want. Like this:
 
@@ -227,8 +221,7 @@ dim(myname)
 
     ## [1] 158   5
 
-8. Plotting
------------
+### 8. Plotting
 
 R is great for plotting. The simplest type of plot is just an x,y scatterplot:
 
@@ -267,8 +260,7 @@ plot(myname$year,myname$prop,
 
        
 
-Homework
---------
+### Homework
 
 Each week, you will submit a script for homework. While most of the concepts you will need will be taught during section, you may have to look up some commands online (remember, Google is your friend!).
 
