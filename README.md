@@ -128,23 +128,11 @@ class(season)
 Two somewhat confusing classes are `character` and `factor`. `character` means a string of letters while `factor` represents categorical data. For plotting and summarizing, we often want `factor` data. We can convert `character` data to `factor` data using the `as.factor` command:
 
 ``` r
-class(season)
-```
-
-    ## [1] "character"
-
-``` r
-length(season) #this tells you how many letters there are
-```
-
-    ## [1] 1
-
-``` r
 season_factor <- as.factor(season)
-length(season) #this tells you how many dat apoints therer are
+class(season_factor)
 ```
 
-    ## [1] 1
+    ## [1] "factor"
 
      
 
