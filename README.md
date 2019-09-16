@@ -30,7 +30,7 @@ Some special functions or datasets can be downloaded as packages. To install the
 install.packages("babynames")
 ```
 
-You only have to install a package once. However, each time you use a package you will need to tell R you are using commands from that package. It's good practice to place this at the top of your script.
+You only have to install a package once because the package is downloaded to your computer. However, each time you use a package you will need to tell R you are using commands from that package. It's good practice to place this at the top of your script.
 
 ``` r
 library(babynames)
@@ -70,7 +70,7 @@ print(myvalue)   #print myvalue
 
     ## [1] 10
 
- 
+There's really no difference between these two ways to print an object  
 
 ``` r
 myvalue + 5   #add 5 to myvalue
@@ -92,7 +92,7 @@ newvalue
 
     ## [1] 15
 
-Note: You can choose any name you want for an object, but be careful! The name should be short (you may have to type it many times), but informative (so you don't get it confused with other objects). You cannot use spaces and you cannot begin an object name with a number.
+Note: You can choose any name you want for an object, but be careful! The name should be short (you may have to type it many times), but informative (so you don't get it confused with other objects). You cannot use spaces and you cannot begin an object name with a number. You can use capitalization and underscore to your advantage, for example: thisIsAnObject or this\_is\_an\_object
 
  
 
@@ -122,6 +122,29 @@ class(season)
 ```
 
     ## [1] "character"
+
+ 
+
+Two somewhat confusing classes are `character` and `factor`. `character` means a string of letters while `factor` represents categorical data. For plotting and summarizing, we often want `factor` data. We can convert `character` data to `factor` data using the `as.factor` command:
+
+``` r
+class(season)
+```
+
+    ## [1] "character"
+
+``` r
+length(season) #this tells you how many letters there are
+```
+
+    ## [1] 1
+
+``` r
+season_factor <- as.factor(season)
+length(season) #this tells you how many dat apoints therer are
+```
+
+    ## [1] 1
 
      
 
@@ -188,7 +211,7 @@ Notice the `:` gives me all the integers between 1 and 4.
 
  
 
-You can also ask for columns by name using the `$` notation:
+You can also ask for columns by name using the `$` notation. This means you can use the column name to ask for a single column out of the dataframe. Note that this does not work for rows.
 
 ``` r
 head(babynames$name)
@@ -221,6 +244,8 @@ dim(myname)
 
     ## [1] 158   5
 
+     
+
 ### 8. Plotting
 
 R is great for plotting. The simplest type of plot is just an x,y scatterplot:
@@ -229,7 +254,7 @@ R is great for plotting. The simplest type of plot is just an x,y scatterplot:
 plot(myname$year,myname$prop)
 ```
 
-![](Week_1_files/figure-markdown_github/unnamed-chunk-18-1.png)
+![](Week_1_files/figure-markdown_github/unnamed-chunk-19-1.png)
 
 Use `?` to look at the options for plotting. For example, here I add more informative axis labels and choose a nice color for the points:
 
@@ -240,7 +265,7 @@ plot(myname$year,myname$prop,
      col="aquamarine4")
 ```
 
-![](Week_1_files/figure-markdown_github/unnamed-chunk-19-1.png)
+![](Week_1_files/figure-markdown_github/unnamed-chunk-20-1.png)
 
 Notice that I used new lines (returns) to make this more readable. R doesn't care where you put white space, so use it to make your code as organized as possible.
  
@@ -254,22 +279,11 @@ plot(myname$year,myname$prop,
      col=as.factor(myname$sex))
 ```
 
-![](Week_1_files/figure-markdown_github/unnamed-chunk-20-1.png)
+![](Week_1_files/figure-markdown_github/unnamed-chunk-21-1.png)
 
 ### *Exercise*: Describe this plot in plain english. What conclusions can we draw?
 
        
-
-###### Homework
-
-##### Homework
-
-#### Homework
-
-### Homework
-
-Homework
---------
 
 Homework
 ========
