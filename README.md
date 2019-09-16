@@ -260,7 +260,19 @@ plot(myname$year,myname$prop,
 
        
 
+###### Homework
+
+##### Homework
+
+#### Homework
+
 ### Homework
+
+Homework
+--------
+
+Homework
+========
 
 Each week, you will submit a script for homework. While most of the concepts you will need will be taught during section, you may have to look up some commands online (remember, Google is your friend!).
 
