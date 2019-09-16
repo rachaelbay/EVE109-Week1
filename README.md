@@ -92,7 +92,7 @@ newvalue
 
     ## [1] 15
 
-Note: You can choose any name you want for an object, but be careful! The name should be short (you may have to type it many times), but informative (so you don't get it confused with other objects). You cannot use spaces and you cannot begin an object name with a number. You can use capitalization and underscore to your advantage, for example: thisIsAnObject or this\_is\_an\_object
+Note: You can choose any name you want for an object, but be careful! The name should be short (you may have to type it many times), but informative (so you don't get it confused with other objects). You cannot use spaces and you cannot begin an object name with a number. You can use capitalization and underscore to your advantage, for example: *thisIsAnObject* or *this\_is\_an\_object*
 
  
 
