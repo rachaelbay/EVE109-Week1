@@ -1,8 +1,7 @@
 EVE 109 Section Week 1
 ================
 
-1. Installing R and RStudio
----------------------------
+### 1. Installing R and RStudio
 
 For most of our analysis in this class, we will work with the programming language "R". RStudio is a software that provides a nice interface for using R. The very first thing we need to do is install both R and RStudio. The following link has instructions for installing R and RStudio on any laptop:
 
