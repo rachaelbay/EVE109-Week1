@@ -98,7 +98,7 @@ Note: You can choose any name you want for an object, but be careful! The name s
 
 ### *Exercise*: Write a script to find out what fraction of your life you've been at UC Davis
 
-Include objects for your age and the number of years you've been at Davis. Have the script print the answer. Put up your green card when you're done.
+Include objects for your age and the number of years you've been at Davis. Have the script print the answer.
 
      
 
@@ -212,8 +212,9 @@ head(babynames$name)
 You can use the `subset` function to ask for rows that meet certain criteria. Notice the double `==`. You use this when you are comparing values.
 
 ``` r
-myname <- subset(babynames,name=="Rachael")   # take just the entries where name = "Rachael"
-head(myname)
+myname <- "Rachael"
+mydata <- subset(babynames,name==myname)   # take just the entries where name = "Rachael"
+head(mydata)
 ```
 
     ## # A tibble: 6 x 5
@@ -227,7 +228,7 @@ head(myname)
     ## 6  1885 F     Rachael     8 0.0000564
 
 ``` r
-dim(myname)
+dim(mydata)
 ```
 
     ## [1] 158   5
@@ -239,7 +240,7 @@ dim(myname)
 R is great for plotting. The simplest type of plot is just an x,y scatterplot:
 
 ``` r
-plot(myname$year,myname$prop)
+plot(mydata$year,mydata$prop)
 ```
 
 ![](Week_1_files/figure-markdown_github/unnamed-chunk-19-1.png)
@@ -247,7 +248,7 @@ plot(myname$year,myname$prop)
 Use `?` to look at the options for plotting. For example, here I add more informative axis labels and choose a nice color for the points:
 
 ``` r
-plot(myname$year,myname$prop,
+plot(mydata$year,mydata$prop,
      ylab="Proportion of babies",
      xlab="Year",
      col="aquamarine4")
@@ -261,10 +262,10 @@ Notice that I used new lines (returns) to make this more readable. R doesn't car
 Of course, it's better if color is informative, so lets use it to learn something. Isn't it weird that there are a bunch of points at 0 and other points with higher proportions during the same time frame? Maybe those points are different in some way. Lets try this:
 
 ``` r
-plot(myname$year,myname$prop,
+plot(mydata$year,mydata$prop,
      ylab="Proportion of babies",
      xlab="Year",
-     col=as.factor(myname$sex))
+     col=as.factor(mydata$sex))
 ```
 
 ![](Week_1_files/figure-markdown_github/unnamed-chunk-21-1.png)
@@ -302,7 +303,7 @@ If the answer requires a plot, follow the same format, with a comment indicating
 
 ``` r
 #Answer to Question 2
-plot(myname$year,myname$prop)
+plot(mydata$year,mydata$prop)
 ```
 
  
